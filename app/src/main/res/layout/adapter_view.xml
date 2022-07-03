@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adapter_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/imagetittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageview"
+            android:text="view" />
+
+        <ImageView
+            android:id="@+id/imageViewEdit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/imageViewDeltete"
+            android:src="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/imageViewDeltete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_baseline_clear_24" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imagetittle"
+
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+
+        android:id="@+id/l_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="5dp">
+
+
+        <TextView
+            android:id="@+id/hourStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hourStartTime"
+            android:text=":"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/minuteStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/colon"
+            android:text="00"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/minuteStartTime"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/strikethrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pm"
+            android:text=" - "
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/hourEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/strikethrough"
+            android:text="07"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/colonendtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hourEndTime"
+            android:text=":"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/minuteEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/colonendtime"
+            android:text="00"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_toRightOf="@+id/minuteEndTime"
+            android:id="@+id/am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="" />
+
+        <Switch
+            android:id="@+id/aswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="33dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:text="SU" />
+
+    <TextView
+        android:id="@+id/day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day1"
+        android:text="MO" />
+
+    <TextView
+        android:id="@+id/day3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day2"
+        android:text="TU" />
+
+    <TextView
+        android:id="@+id/day4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day3"
+        android:text="WE" />
+
+    <TextView
+        android:id="@+id/day5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day4"
+        android:text="TH" />
+
+    <TextView
+        android:id="@+id/day6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day5"
+        android:text="FR" />
+
+    <TextView
+        android:id="@+id/day7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_time"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/day6"
+        android:text="SA" />
+
+</RelativeLayout>
